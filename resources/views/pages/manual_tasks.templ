@@ -1,0 +1,45 @@
+package pages
+
+import "github.com/mrrizkin/crontastic/resources/views/layouts"
+
+templ ManualTasks() {
+	@layouts.Base(layouts.BaseProps{
+		Title: "Manual Tasks",
+	}) {
+		<h1>Welcome to crontastic, automate you task here!</h1>
+		<div class="flex flex-row flex-wrap gap-4">
+			<div
+				class="flex h-40 w-40 flex-col justify-center rounded-xl border bg-white shadow-sm dark:border-neutral-700 dark:bg-neutral-800 dark:shadow-neutral-700/70"
+			>
+				<div class="p-4 md:p-5">
+					<i class="h-16 w-16" data-lucide="download"></i>
+					<p class="mt-5 text-sm text-gray-500 dark:text-neutral-300">Install Software</p>
+				</div>
+			</div>
+			<div
+				class="flex h-40 w-40 flex-col justify-center rounded-xl border bg-white shadow-sm dark:border-neutral-700 dark:bg-neutral-800 dark:shadow-neutral-700/70"
+			>
+				<div class="p-4 md:p-5">
+					<i class="h-16 w-16" data-lucide="refresh-ccw"></i>
+					<p class="mt-5 text-sm text-gray-500 dark:text-neutral-300">Update Software</p>
+				</div>
+			</div>
+			<div
+				class="flex h-40 w-40 flex-col justify-center rounded-xl border bg-white shadow-sm dark:border-neutral-700 dark:bg-neutral-800 dark:shadow-neutral-700/70"
+			>
+				<div class="p-4 md:p-5">
+					<i class="h-16 w-16" data-lucide="rotate-ccw"></i>
+					<p class="mt-5 text-sm text-gray-500 dark:text-neutral-300">Restart Services</p>
+				</div>
+			</div>
+			<div
+				class="flex h-40 w-40 flex-col justify-center rounded-xl border bg-white shadow-sm dark:border-neutral-700 dark:bg-neutral-800 dark:shadow-neutral-700/70"
+			>
+				<div class="p-4 md:p-5">
+					<i class="h-16 w-16" data-lucide="arrow-right-left"></i>
+					<p class="mt-5 text-sm text-gray-500 dark:text-neutral-300">Transfer Files</p>
+				</div>
+			</div>
+		</div>
+	}
+}

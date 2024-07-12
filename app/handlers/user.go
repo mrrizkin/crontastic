@@ -4,11 +4,12 @@ import (
 	"github.com/gofiber/fiber/v2"
 
 	"github.com/mrrizkin/crontastic/app/models"
+	"github.com/mrrizkin/crontastic/resources/views/pages"
 	"github.com/mrrizkin/crontastic/system/types"
 )
 
 func (h *Handlers) UserPage(c *fiber.Ctx) error {
-	return c.Render("pages/user", fiber.Map{})
+	return h.Render(c, pages.User())
 }
 
 func (h *Handlers) UserCreate(c *fiber.Ctx) error {

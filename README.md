@@ -11,6 +11,7 @@ Before you get started, ensure you have the following installed:
 - **Go**
 - **Air**
 - **SQLite**
+- **Templ**
 
 ## Quick Start
 

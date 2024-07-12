@@ -1,7 +1,9 @@
 package handlers
 
 import (
+	"github.com/a-h/templ"
 	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/fiber/v2/middleware/adaptor"
 
 	"github.com/mrrizkin/crontastic/app/config"
 	"github.com/mrrizkin/crontastic/app/domains/database"
@@ -102,4 +104,13 @@ func (h *Handlers) SendJson(c *fiber.Ctx, resp interface{}, status ...int) error
 	}
 
 	return c.Status(statusCode).JSON(resp)
+}
+
+func (h *Handlers) Render(c *fiber.Ctx, component templ.Component, options ...func(*templ.ComponentHandler)) error {
+	componentHandler := templ.Handler(component)
+	for _, option := range options {
+		option(componentHandler)
+	}
+
+	return adaptor.HTTPHandler(componentHandler)(c)
 }

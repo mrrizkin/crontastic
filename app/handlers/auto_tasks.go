@@ -1,7 +1,11 @@
 package handlers
 
-import "github.com/gofiber/fiber/v2"
+import (
+	"github.com/gofiber/fiber/v2"
+
+	"github.com/mrrizkin/crontastic/resources/views/pages"
+)
 
 func (h *Handlers) AutoTasksPage(c *fiber.Ctx) error {
-	return c.Render("pages/auto_tasks", fiber.Map{})
+	return h.Render(c, pages.AutoTasks())
 }

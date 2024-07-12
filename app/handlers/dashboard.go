@@ -5,6 +5,8 @@ import (
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/pbnjay/memory"
+
+	"github.com/mrrizkin/crontastic/resources/views/pages"
 )
 
 type SystemStats struct {
@@ -51,5 +53,5 @@ func (h *Handlers) SystemUsage(c *fiber.Ctx) error {
 }
 
 func (h *Handlers) DashboardPage(c *fiber.Ctx) error {
-	return c.Render("pages/dashboard", fiber.Map{})
+	return h.Render(c, pages.Dashboard())
 }

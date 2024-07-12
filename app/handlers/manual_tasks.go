@@ -1,7 +1,11 @@
 package handlers
 
-import "github.com/gofiber/fiber/v2"
+import (
+	"github.com/gofiber/fiber/v2"
+
+	"github.com/mrrizkin/crontastic/resources/views/pages"
+)
 
 func (h *Handlers) ManualTasksPage(c *fiber.Ctx) error {
-	return c.Render("pages/manual_tasks", fiber.Map{})
+	return h.Render(c, pages.ManualTasks())
 }

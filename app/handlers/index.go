@@ -2,10 +2,10 @@ package handlers
 
 import (
 	"github.com/gofiber/fiber/v2"
+
+	"github.com/mrrizkin/crontastic/resources/views/pages"
 )
 
 func (h *Handlers) IndexPage(c *fiber.Ctx) error {
-	return c.Render("pages/welcome", fiber.Map{
-		"csrf": c.Locals("X-CSRF-Token"),
-	})
+  return h.Render(c, pages.Welcome())
 }

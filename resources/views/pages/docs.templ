@@ -1,0 +1,11 @@
+package pages
+
+import "github.com/mrrizkin/crontastic/resources/views/layouts"
+
+templ Docs() {
+	@layouts.Base(layouts.BaseProps{
+		Title: "Documentation",
+	}) {
+		<h1>Welcome to crontastic, automate you task here!</h1>
+	}
+}
