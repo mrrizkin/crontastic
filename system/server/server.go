@@ -63,12 +63,10 @@ func Vite(vite govite.ViteManifestInfo) func(interface{}) string {
 	}
 }
 
-// Menu struct to hold menu items
-type Menu struct {
-	Items []MenuItem
+type Site struct {
+	Menus []MenuItem
 }
 
-// MenuItem struct for individual menu items
 type MenuItem struct {
 	Name string
 	URL  string
@@ -86,15 +84,15 @@ func New(config *config.Config, logger *logger.Logger, session *session.Session)
 	engine.AddFunc("vite", Vite(viteInstance))
 	engine.AddFunc("viteClient", ViteClient(viteInstance))
 	engine.AddFunc("viteReactRefresh", ViteReactRefresh(viteInstance))
-	engine.AddFunc("getMenu", func() Menu {
-		return Menu{
-			Items: []MenuItem{
+	engine.AddFunc("site", func() Site {
+		return Site{
+			Menus: []MenuItem{
 				{Name: "Dashboard", URL: "/admin/dashboard", Icon: "house"},
 				{Name: "Auto Tasks", URL: "/admin/auto-tasks", Icon: "calendar-check"},
 				{Name: "Manual Tasks", URL: "/admin/manual-tasks", Icon: "clipboard-list"},
 				{Name: "Users", URL: "/admin/users", Icon: "users-round"},
 				{Name: "Settings", URL: "/admin/settings", Icon: "settings"},
-				{Name: "Documentation", URL: "/docs", Icon: "book-open"},
+				{Name: "Documentation", URL: "/docs", Icon: "book-open-text"},
 			},
 		}
 	})

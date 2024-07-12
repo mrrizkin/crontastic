@@ -1,17 +1,50 @@
 import "../css/index.css";
 import "preline";
 
-import { createIcons, ClipboardList, BookOpen, House, CalendarCheck, ArrowRight, UsersRound, Settings } from "lucide";
+import {
+  createIcons,
+  ArrowRight,
+  ArrowRightLeft,
+  BellDot,
+  BookOpenText,
+  BookText,
+  CalendarCheck,
+  ClipboardList,
+  DatabaseBackup,
+  Download,
+  House,
+  ListRestart,
+  RefreshCcw,
+  RotateCcw,
+  ScrollText,
+  Settings,
+  ShieldCheck,
+  ShieldEllipsis,
+  Trash2,
+  UsersRound,
+} from "lucide";
 
 createIcons({
   icons: {
-    House,
-    BookOpen,
+    ArrowRight,
+    ArrowRightLeft,
+    BellDot,
+    BookOpenText,
+    BookText,
     CalendarCheck,
     ClipboardList,
-    UsersRound,
-    ArrowRight,
+    DatabaseBackup,
+    Download,
+    House,
+    ListRestart,
+    RefreshCcw,
+    RotateCcw,
+    ScrollText,
     Settings,
+    ShieldCheck,
+    ShieldEllipsis,
+    Trash2,
+    UsersRound,
   },
 });
 

@@ -4,4 +4,35 @@
 
 {% block content %}
   <h1>Welcome to crontastic, automate you task here!</h1>
+
+  <div class="flex flex-row flex-wrap gap-4">
+    <div
+      class="flex h-40 w-40 flex-col justify-center rounded-xl border bg-white shadow-sm dark:border-neutral-700 dark:bg-neutral-800 dark:shadow-neutral-700/70">
+      <div class="p-4 md:p-5">
+        <i class="h-16 w-16" data-lucide="database-backup"></i>
+        <p class="mt-5 text-sm text-gray-500 dark:text-neutral-300">Database Backup</p>
+      </div>
+    </div>
+    <div
+      class="flex h-40 w-40 flex-col justify-center rounded-xl border bg-white shadow-sm dark:border-neutral-700 dark:bg-neutral-800 dark:shadow-neutral-700/70">
+      <div class="p-4 md:p-5">
+        <i class="h-16 w-16" data-lucide="trash-2"></i>
+        <p class="mt-5 text-sm text-gray-500 dark:text-neutral-300">Clean Up Cache</p>
+      </div>
+    </div>
+    <div
+      class="flex h-40 w-40 flex-col justify-center rounded-xl border bg-white shadow-sm dark:border-neutral-700 dark:bg-neutral-800 dark:shadow-neutral-700/70">
+      <div class="p-4 md:p-5">
+        <i class="h-16 w-16" data-lucide="shield-check"></i>
+        <p class="mt-5 text-sm text-gray-500 dark:text-neutral-300">Security Scan</p>
+      </div>
+    </div>
+    <div
+      class="flex h-40 w-40 flex-col justify-center rounded-xl border bg-white shadow-sm dark:border-neutral-700 dark:bg-neutral-800 dark:shadow-neutral-700/70">
+      <div class="p-4 md:p-5">
+        <i class="h-16 w-16" data-lucide="list-restart"></i>
+        <p class="mt-5 text-sm text-gray-500 dark:text-neutral-300">Start Services</p>
+      </div>
+    </div>
+  </div>
 {% endblock %}
